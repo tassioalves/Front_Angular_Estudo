@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="frontAngular">
+<head>
+    <meta charset="UTF-8">
+    <title>Front com Angular</title>
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/angular-loading-bar/build/loading-bar.min.css">
+    <!--    <link rel="stylesheet" href="css/login.css">-->
+    <link rel="stylesheet" href="css/newUser.css">
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src=node_modules/angular/angular.min.js></script>
+    <script src="node_modules/angular-route/angular-route.min.js"></script>
+
+    <script src="app.js"></script>
+    <script src="router.js"></script>
+
+    <script src="controller/indexController.js"></script>
+    <script src="controller/loginController.js"></script>
+    <script src="controller/newUserController.js"></script>
+    <script src="controller/listUserController.js"></script>
+    <script src="controller/cadUserController.js"></script>
+
+
+    <script src="service/indexService.js"></script>
+    <script src="service/listUserService.js"></script>
+    <script src="service/listUserService.js"></script>
+    <script src="service/cadUserService.js"></script>
+
+</head>
+
+<body ng-controller="indexController">
+<div class="container">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">AngularJs</h1>
+            <p class="lead">Aplicação de teste de desenvolvimento de um front-end com AngularJs</p>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#!login">E-Commerce</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon">dddd</span>
+    </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#!listUser">Listar <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#!cadUser">Cadastrar <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="" role="button" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">
+                        Cadastros
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#!listProduct">Produtos</a>
+                        <a class="dropdown-item" href="#!listCategory">Categorias</a>
+                    </div>
+                </li>
+            </ul>
+
+            <button class="btn btn-success" ng-click="abrirCarrinho()" style="margin-right: 10px">Carrinho</button>
+            <button class="btn btn-primary" ng-click="signup()">Login</button>
+            <button class="btn btn-danger" ng-click="logout()">Logout</button>
+        </div>
+    </nav>
+</div>
+
+<div ng-view>
+
+</div>
+
+
+</body>
+</html>
